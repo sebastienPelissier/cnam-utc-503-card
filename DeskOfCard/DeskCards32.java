@@ -1,14 +1,14 @@
-package CardPack;
+package DeskOfCard;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public final class CardPack32 {
+public final class DeskCards32 {
     private final List<Card32> list = new ArrayList<>(32);
 
-    private static CardPack32 instance = null;
+    private static DeskCards32 instance = null;
 
-    private CardPack32(){
+    private DeskCards32(){
         super();
         for ( Suit type : Suit.values()) {
             for (Value value : Value.values()){
@@ -21,15 +21,15 @@ public final class CardPack32 {
         }
     }
 
-    public final static CardPack32 getInstance(){
-        if (CardPack32.instance == null){
-            synchronized (CardPack32.class){
-                if (CardPack32.instance == null){
-                    CardPack32.instance = new CardPack32();
+    public final static DeskCards32 getInstance(){
+        if (DeskCards32.instance == null){
+            synchronized (DeskCards32.class){
+                if (DeskCards32.instance == null){
+                    DeskCards32.instance = new DeskCards32();
                 }
             }
         }
-        return CardPack32.instance;
+        return DeskCards32.instance;
     }
 
     public void getCardPackList(){

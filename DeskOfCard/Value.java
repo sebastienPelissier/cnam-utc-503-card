@@ -1,7 +1,4 @@
-package CardPack;
-
-import java.util.Arrays;
-import java.util.Optional;
+package DeskOfCard;
 
 public enum Value {
   TWO(2,"two", 52),

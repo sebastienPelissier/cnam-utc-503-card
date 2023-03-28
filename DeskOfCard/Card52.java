@@ -1,4 +1,4 @@
-package CardPack;
+package DeskOfCard;
 
 public class Card52 extends Card{
 

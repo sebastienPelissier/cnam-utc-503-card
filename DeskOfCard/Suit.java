@@ -1,4 +1,4 @@
-package CardPack;
+package DeskOfCard;
 
 public enum Suit {
     heart,spade,club,diamond;

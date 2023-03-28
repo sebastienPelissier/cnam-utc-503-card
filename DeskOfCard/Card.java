@@ -1,4 +1,4 @@
-package CardPack;
+package DeskOfCard;
 
 public abstract class Card implements CardInterface
 {
