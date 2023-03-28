@@ -1,10 +1,10 @@
 package CardPack;
 
-public class Card32 extends Card
-{
+public class Card52 extends Card{
+
     private final Value value;
     private final Suit suit;
-    public Card32(Value value, Suit suit){
+    public Card52(Value value, Suit suit){
         super();
         this.value = value;
         this.suit = suit;
@@ -14,11 +14,8 @@ public class Card32 extends Card
         String name = this.suit + " " + this.value.getLabel();
         return getIsFaceUp() ? name : "#####" ;
     }
-
     @Override
-    public boolean isBetterThanOrEqual(CardInterface opponentCard)
-    {
-        Card32 card = (Card32) opponentCard;
-        return this.value.getPower() >= card.value.getPower();
+    public boolean isBetterThanOrEqual(CardInterface opponentCard) {
+        return false;
     }
 }

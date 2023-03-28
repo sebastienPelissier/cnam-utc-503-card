@@ -1,6 +1,6 @@
 package CardPack;
 
-public enum Trump {
+public enum Suit {
     heart,spade,club,diamond;
 
     public String toString() {

@@ -1,19 +1,43 @@
 package CardPack;
 
-public enum Value {
-    seven,eight,nine,ten,jack,queen,king,ace;
+import java.util.Arrays;
+import java.util.Optional;
 
-    public String toString() {
-        return switch (this) {
-            case seven -> "7";
-            case eight -> "8";
-            case nine -> "9";
-            case ten -> "10";
-            case jack -> "jack";
-            case queen -> "queen";
-            case king -> "king";
-            case ace -> "ace";
-            default -> throw new RuntimeException("Value not found");
-        };
-    }
+public enum Value {
+  TWO(2,"two", 52),
+  THREE(3, "tree", 52),
+  FOUR(4, "four", 52),
+  FIVE(5, "five", 52),
+  SIX(6, "six", 52),
+  SEVEN(7, "seven", 32),
+  EIGHT(8,"eight", 32 ),
+  NINE(9, "nine", 32),
+  TEN(10, "ten", 32),
+  JACK(11, "jack", 32),
+  QUEEN(12, "queen", 32),
+  KING(13, "king", 32),
+  ACE(14, "ace", 32);
+
+
+  private final int power;
+  private final String label;
+  private final int type;
+
+  private Value(int power,String label, int type){
+    this.power = power;
+    this.label = label;
+    this.type = type;
+  }
+
+  public int getPower(){
+    return this.power;
+  }
+
+  public String getLabel(){
+    return this.label;
+  }
+
+  public int getType(){
+    return this.type;
+  }
 }

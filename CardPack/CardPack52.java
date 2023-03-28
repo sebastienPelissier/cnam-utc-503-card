@@ -8,20 +8,16 @@ import java.util.List;
  * # 3/ Créer une classe Paquet dont le constructeur simple génère un ArrayList de 32 cartes.
  */
 
-public class CardPack32 {
-    private List<Card32> list = new ArrayList<>(32);
+public class CardPack52 {
+    private final List<Card52> list = new ArrayList<>(52);
 
 
-    public CardPack32(){
+    public CardPack52(){
         super();
         for ( Suit type : Suit.values()) {
             for (Value value : Value.values()){
-
-                if (value.getType() != 32){
-                    continue;
-                }
-                 Card32 card = new Card32(value, type);
-                 list.add(card);
+                Card52 card = new Card52(value, type);
+                list.add(card);
             }
         }
     }
@@ -30,11 +26,7 @@ public class CardPack32 {
         System.out.println(list);
     }
 
-    public Card32 getSingleCard(int index){
+    public Card52 getSingleCard(int index){
         return this.list.get(index);
     }
-
-
-
-
 }

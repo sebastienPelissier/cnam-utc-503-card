@@ -9,5 +9,13 @@ public class Main {
         System.out.println(card.toString());
         card.turn();
         System.out.println(card.toString());
+
+
+
+        CardPack52 cardPack52 = new CardPack52();
+        Card52 card52 = cardPack52.getSingleCard(6);
+        card52.turn();
+        System.out.println(card52.toString());
+
     }
 }
