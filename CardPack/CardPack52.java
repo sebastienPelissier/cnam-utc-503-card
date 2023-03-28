@@ -3,16 +3,11 @@ package CardPack;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * # 3/ Créer une classe Paquet dont le constructeur simple génère un ArrayList de 32 cartes.
- */
-
-public class CardPack52 {
+public final class CardPack52 {
     private final List<Card52> list = new ArrayList<>(52);
+    private static CardPack52 instance = null;
 
-
-    public CardPack52(){
+    private CardPack52(){
         super();
         for ( Suit type : Suit.values()) {
             for (Value value : Value.values()){
@@ -20,6 +15,17 @@ public class CardPack52 {
                 list.add(card);
             }
         }
+    }
+
+    public final static CardPack52 getInstance(){
+        if (CardPack52.instance == null){
+            synchronized (CardPack52.class){
+                if (CardPack52.instance == null){
+                    CardPack52.instance = new CardPack52();
+                }
+            }
+        }
+        return CardPack52.instance;
     }
 
     public void getCardPackList(){
