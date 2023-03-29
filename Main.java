@@ -1,4 +1,7 @@
-package DeskOfCard;
+import Card.Card32;
+import Card.Card52;
+import DeskOfCard.DeskCards32;
+import DeskOfCard.DeskCards52;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,7 @@
-package DeskOfCard;
+package Card;
+
+import Enum.Suit;
+import Enum.Value;
 
 public class Card32 extends Card
 {
@@ -15,7 +18,6 @@ public class Card32 extends Card
         return getIsFaceUp() ? name : "#####" ;
     }
 
-    @Override
     public boolean isBetterThanOrEqual(CardInterface opponentCard)
     {
         Card32 card = (Card32) opponentCard;

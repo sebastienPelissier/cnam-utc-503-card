@@ -1,4 +1,7 @@
-package DeskOfCard;
+package Card;
+
+import Enum.Suit;
+import Enum.Value;
 
 public class Card52 extends Card{
 
@@ -14,7 +17,7 @@ public class Card52 extends Card{
         String name = this.suit + " " + this.value.getLabel();
         return getIsFaceUp() ? name : "#####" ;
     }
-    @Override
+
     public boolean isBetterThanOrEqual(CardInterface opponentCard) {
         return false;
     }

@@ -1,6 +1,6 @@
-package DeskOfCard;
+package Card;
 
-public abstract class Card implements CardInterface
+public abstract class Card<T extends CardInterface>
 {
     private boolean isFaceUp = false;
 
@@ -11,8 +11,6 @@ public abstract class Card implements CardInterface
     protected boolean getIsFaceUp(){
         return this.isFaceUp;
     }
-
-    @Override
     public void turn(){
         this.isFaceUp = !this.isFaceUp;
     }

@@ -1,4 +1,4 @@
-package DeskOfCard;
+package Card;
 
 public interface CardInterface {
     public void turn();

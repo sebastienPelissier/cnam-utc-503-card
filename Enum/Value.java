@@ -1,4 +1,4 @@
-package DeskOfCard;
+package Enum;
 
 public enum Value {
   TWO(2,"two", 52),

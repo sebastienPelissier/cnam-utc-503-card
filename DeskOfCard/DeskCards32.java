@@ -1,5 +1,9 @@
 package DeskOfCard;
 
+import Card.Card32;
+import Enum.Suit;
+import Enum.Value;
+
 import java.util.ArrayList;
 import java.util.List;
 
